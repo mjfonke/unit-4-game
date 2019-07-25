@@ -11,41 +11,53 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    </head>
+        <link href="https://fonts.googleapis.com/css?family=Audiowide|Bungee+Outline|Electrolize&display=swap" rel="stylesheet">    </head>
 
     <body>
 
         <script type="text/javascript" src="assets/javascript/game.js"></script>
 
-        <div class="container">
-            <div class="jumbotron">
-                <h1 class="text-center">
-                    <strong>Crystal Collector</strong>
-                </h1>
-                <hr>
-                <div class="text-center">
-                    <p>You will be givien a random number at the start of the game.</p>
-                    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-                    <p>You win the game by matching your total score goes above the random number.</p>
-                    <p>The value of each crystal is hidden from you until you click on it.</p>
-                    <p>Each time when the game starts, the game will change the values of each crystal.</p>
+       
+            <nav class="nav justify-content-center navbar-expand-lg p-4">
+             <div class="container">
+              <h1 class="text-center">Crystal Collector</h1>
+            </div>
+            </nav>
+          
+
+        <div class="container mt-5 bigbox">
+            <div class="row mb-5">
+                <div class="col-sm-6">
+                    <p>You will be givien a random number at the start of the game.<br>
+                    There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+                    You win the game by matching your total score goes above the random number.
+                    The value of each crystal is hidden from you until you click on it.
+                    Each time when the game starts, the game will change the values of each crystal.</p>
                 </div>
                 
+                
+            
+                <div class="col-sm-6 mt-5">
+                    <img class = "crystal mr-3" id = "gem1" src = "assets/images/gemstone-blue.jpeg" style="width: 100px; height: 100px;">
+                    <img class = "crystal mr-3" id = "gem2" src = "assets/images/gemstone-green.jpeg" style="width: 100px; height: 100px;">
+                    <img class = "crystal mr-3" id = "gem3" src = "assets/images/gemstone-purple.jpeg" style="width: 100px; height: 100px;">
+                    <img class = "crystal mr-3" id = "gem4" src = "assets/images/gemstone-red.jpeg" style="width: 100px; height: 100px;">
+                    
+                </div>
+        
             </div>
 
             <div class="row">
                 <div class="col-sm-12">
-                    <img class = "crystal" id = "gem1" src = "assets/images/gemstone-blue.jpeg" style="width: 100px; height: 100px;">
-                    <img class = "crystal" id = "gem2" src = "assets/images/gemstone-green.jpeg" style="width: 100px; height: 100px;">
-                    <img class = "crystal" id = "gem3" src = "assets/images/gemstone-purple.jpeg" style="width: 100px; height: 100px;">
-                    <img class = "crystal" id = "gem4" src = "assets/images/gemstone-red.jpeg" style="width: 100px; height: 100px;">
+                   
                 </div>
+                     
+                
             </div>
 
             <div class="row">
                 <div class="col-sm-3">
-                <div class="card text-center" style="width: 15rem">
+                <div class="card text-center bg-dark text-white" style="width: 15rem">
                     <div class="card-header">Number to Match</div>
                     <div class="card-body">
                         <h2 id="match-number"></h2>
@@ -54,7 +66,7 @@
                 </div>
 
                 <div class="col-sm-3">
-                <div class="card text-center" style="width: 15rem">
+                <div class="card text-center bg-info text-white" style="width: 15rem">
                     <div class="card-header">Your Total Score</div>
                     <div class="card-body">
                         <h2 id="total-score"></h2>
@@ -63,30 +75,26 @@
                 </div>
 
                 <div class="col-sm-3">
-                    <div class="card text-center" style="width: 15rem">
+                    <div class="card text-center bg-success text-white" style="width: 15rem">
                         <div class="card-header">Wins</div>
                         <div class="card-body">
-                            <h2 id="win-text"></h2>
+                            <h2 id="win-text">0</h2>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-sm-3">
-                    <div class="card text-center" style="width: 15rem">
+                    <div class="card text-center bg-danger text-white" style="width: 15rem">
                         <div class="card-header">Losses</div>
                         <div class="card-body">
-                            <h2 id="lose-text"></h2>
+                            <h2 id="lose-text">0</h2>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div><h1 class = "clear mt-5" id="win-lose"></h1> </div>
 
-            <div class="row">
-                
-                    
-                
-            </div>
         </div>
 
     </body>

@@ -1,0 +1,39 @@
+body {
+  background-image: url("../images/diamond.png");
+}
+
+.nav {
+  background: #ffffff;
+  opacity: 0.9;
+}
+
+h1 {
+    font-family: 'Audiowide', cursive;
+
+}
+
+p {
+    font-family: 'Electrolize', sans-serif;
+    font-size: 18px;
+    line-height: 1 em;
+}
+
+.card-header {
+    font-family: 'Electrolize', sans-serif;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Electrolize', sans-serif;
+}
+
+.clear {
+    clear: both;
+    text-align: center;
+}
+
+.bigbox {
+    background: #ffffff;
+    padding: 35px;
+    opacity: 0.95;
+}
