@@ -1,9 +1,9 @@
 $(document).ready(function(){
 
-// computer pic random number between 19-120
+// declare variables
+
 var computerNumber;
 
-// declare variables
 var yourScore = 0;
 
 var wins = 0;
@@ -20,7 +20,12 @@ var crystalNum4;
 
 
 function gameStart() {
+
+    // computer pic random number between 19-120
+
     computerNumber = Math.floor(Math.random() * 101) + 19;
+
+    // crystal pick random numbers between 1-12
 
     crystalNum1 = Math.floor(Math.random() * 11) + 1;
 
@@ -33,6 +38,8 @@ function gameStart() {
     $("#match-number").text(computerNumber);
 
     $("#total-score").text("0")
+
+    // assign numbers to each crystal images
 
     $("#gem1").attr("data-crystalvalue", crystalNum1);
 
@@ -54,8 +61,7 @@ function gameStart() {
 }
 gameStart();
 
-
-
+// when user click crystal, specific amount of number will add up to your total score.
 
 $("#gem1, #gem2, #gem3, #gem4").on("click", function(){
     var crystalValue = ($(this).attr("data-crystalvalue"));
@@ -68,6 +74,7 @@ $("#gem1, #gem2, #gem3, #gem4").on("click", function(){
 
     console.log(crystalValue);
 
+// if the total score equals to computer number, player win and game reset. 
 
     if (yourScore === computerNumber) {
         wins++
@@ -77,6 +84,7 @@ $("#gem1, #gem2, #gem3, #gem4").on("click", function(){
         $("#win-lose").html("<h2>You Win!!!</h2>")
         
     }
+// if the totla score is more than computer number, plater lost and game reset.
 
     if (yourScore > computerNumber) {
         losses++
